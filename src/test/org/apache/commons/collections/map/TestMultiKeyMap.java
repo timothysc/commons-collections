@@ -315,10 +315,10 @@ public class TestMultiKeyMap extends AbstractTestIterableMap {
             switch (key.size()) {
                 case 2:
                 assertEquals(true, multimap.containsKey(key.getKey(0), key.getKey(1)));
-                assertEquals(value, multimap.remove(key.getKey(0), key.getKey(1)));
+                assertEquals(true, multimap.remove(key.getKey(0), key.getKey(1)));
                 assertEquals(false, multimap.containsKey(key.getKey(0), key.getKey(1)));
                 assertEquals(size - 1, multimap.size());
-                assertEquals(null, multimap.remove(key.getKey(0), key.getKey(1)));
+                assertEquals(false, multimap.remove(key.getKey(0), key.getKey(1)));
                 assertEquals(false, multimap.containsKey(key.getKey(0), key.getKey(1)));
                 break;
                 case 3:

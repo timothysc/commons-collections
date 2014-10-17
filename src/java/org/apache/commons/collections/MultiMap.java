@@ -66,7 +66,7 @@ public interface MultiMap extends Map {
      * @throws ClassCastException if the key or value is of an invalid type
      * @throws NullPointerException if the key or value is null and null is invalid
      */
-    public Object remove(Object key, Object item);
+    public boolean remove(Object key, Object item);
 
     //-----------------------------------------------------------------------
     /**
@@ -144,7 +144,7 @@ public interface MultiMap extends Map {
      * @throws ClassCastException if the key is of an invalid type
      * @throws NullPointerException if the key is null and null keys are invalid
      */
-    Object remove(Object key);
+    //boolean remove(Object key);
 
     /**
      * Gets a collection containing all the values in the map.
